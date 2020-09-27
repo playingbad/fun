@@ -43,21 +43,20 @@ return head;
 }
 
 int show_list(PBook head1){
-PBook head = (PBook)malloc(sizeof(Book));
-head = head1;
-	while(head->next!=NULL)
+PBook news = (PBook)malloc(sizeof(Book));
+news = head1;
+	while(news!=NULL)
 	{
-	printf("CountBook %d: the No.%d week details--Income:%d  Spend:%d  \n",head->id,head->week,head->income,head->spend);
-	head=head->next;
+	printf("CountBook %d: the No.%d week details--Income:%d  Spend:%d  \n",news->id,news->week,news->income,news->spend);
+	news=news->next;
 	}
 return 0;
 }
 int main(){
-PBook head = (PBook)malloc(sizeof(Book));
+PBook head1;
 
-head = new_list(5);
-show_list(head);
+head1 = new_list(5);
+show_list(head1);
 
 return 0;
 }
-
